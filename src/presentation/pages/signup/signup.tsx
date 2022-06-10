@@ -25,7 +25,7 @@ const Signup: React.FC = () => {
           />
           <Input
             type="password"
-            name="passwordConfirm"
+            name="passwordConfirmation"
             placeholder="Confirme sua senha"
           />
           <button className={Styles.submit} type="submit">

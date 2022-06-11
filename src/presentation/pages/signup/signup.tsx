@@ -14,7 +14,7 @@ const Signup: React.FC = () => {
     nameError: "Campo obrigatório",
     emailError: "Campo obrigatório",
     passwordError: "Campo obrigatório",
-    passwordConfirmation: "Campo obrigatório",
+    passwordConfirmationError: "Campo obrigatório",
     mainError: "",
   });
 

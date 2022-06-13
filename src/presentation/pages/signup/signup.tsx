@@ -10,7 +10,7 @@ import Context from "@/presentation/contexts/form/form-context";
 import { Validation } from "@/presentation/protocols/validation";
 import { AddAccount } from "@/domain/usecases";
 import { SaveAccessTokenMock } from "@/presentation/test";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 type Props = {
   validation: Validation;
@@ -121,7 +121,14 @@ const Signup: React.FC<Props> = ({
           >
             Criar Conta
           </button>
-          <span className={Styles.link}>Login</span>
+          <Link
+            data-testid={"login-link"}
+            replace
+            to={"/login"}
+            className={Styles.link}
+          >
+            Login
+          </Link>
           <FormStatus />
         </form>
       </Context.Provider>

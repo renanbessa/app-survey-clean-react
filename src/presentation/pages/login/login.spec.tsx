@@ -117,8 +117,8 @@ describe("Login Component", () => {
 
   test("Should enable submit button if form is valid", () => {
     const { sut } = makeSut();
-    Helper.populateField(sut, "submit");
-    Helper.populateField(sut, "submit");
+    Helper.populateField(sut, "email");
+    Helper.populateField(sut, "password");
     Helper.testButtonIsDisabled(sut, "submit", false);
   });
 

@@ -39,3 +39,11 @@ export const testButtonIsDisabled = (
   const button = sut.getByTestId(fieldName) as HTMLButtonElement;
   expect(button.disabled).toBe(isDisabled);
 };
+
+export const testElementExists = (
+  sut: RenderResult,
+  fieldName: string
+): void => {
+  const el = sut.getByTestId(fieldName);
+  expect(el).toBeTruthy();
+};

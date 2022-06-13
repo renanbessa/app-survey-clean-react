@@ -47,7 +47,14 @@ const Signup: React.FC<Props> = ({ validation, addAccount }: Props) => {
   ): Promise<void> => {
     event.preventDefault();
 
-    if (state.isLoading) return;
+    if (
+      state.isLoading ||
+      state.nameError ||
+      state.emailError ||
+      state.passwordError ||
+      state.passwordConfirmationError
+    )
+      return;
 
     setState({
       ...state,

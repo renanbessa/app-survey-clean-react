@@ -9,17 +9,16 @@ import {
 } from "@/presentation/components";
 import Context from "@/presentation/contexts/form/form-context";
 import { Validation } from "@/presentation/protocols/validation";
-import { AddAccount } from "@/domain/usecases";
-import { SaveAccessTokenMock } from "@/presentation/test";
+import { AddAccount, SaveAccessToken } from "@/domain/usecases";
 import { Link, useHistory } from "react-router-dom";
 
 type Props = {
   validation: Validation;
   addAccount: AddAccount;
-  saveAccessToken: SaveAccessTokenMock;
+  saveAccessToken: SaveAccessToken;
 };
 
-const Signup: React.FC<Props> = ({
+const SignUp: React.FC<Props> = ({
   validation,
   addAccount,
   saveAccessToken,
@@ -132,4 +131,4 @@ const Signup: React.FC<Props> = ({
   );
 };
 
-export default Signup;
+export default SignUp;
